@@ -1,13 +1,16 @@
 import random
+import nltk
+
 from nltk.corpus import wordnet
 from time import sleep
 import requests
 
+nltk.download('wordnet')
 
 host = "http://172.18.4.158:8000"
-get_url = f"http://172.18.4.158:8000/get-word"
-post_url = f"http://172.18.4.158:8000/submit-word"
-status_url = f"http://172.18.4.158:8000/status"
+get_url = f"{host}/get-word"
+post_url = f"{host}/submit-word"
+status_url = f"{host}/status"
 
 NUM_ROUNDS = 5
 WORDS = {
